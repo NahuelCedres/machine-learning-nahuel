@@ -1,0 +1,12 @@
+> Hello, user!
+> As long as looking your favorite movies excel file, i noticed something that;
+> Some connections between genres.
+> You like some genre combinations more than others;
+> Also you dislike some genre combinations more than others too...
+> So I decided to calculate your taste.
+> Here are my result based on your tastes
+> If you watch those genres;
+> I think you will generally rate it like the value which I put under P. RATE column.
+> Have fun.
+
+https://www.kaggle.com/weinoose/my-personal-movie-database?select=context.txt

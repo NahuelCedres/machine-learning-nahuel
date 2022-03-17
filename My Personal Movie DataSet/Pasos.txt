@@ -1,0 +1,3 @@
+- Arbol de clasificacion
+- Arbol de clasificacion Y SVM con k =4, 10-9 buenisima, 8-6 Aceptable, 5-3 mala, 2-1 muy mala
+- Regresion logistica con RFE, si la pelicula va a tener ponderacion va  a ser >7 o no
