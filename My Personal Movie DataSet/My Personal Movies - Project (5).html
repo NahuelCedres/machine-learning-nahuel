@@ -13971,7 +13971,7 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Analisis-Supervisado-de-Clasificaci%C3%B3n">Analisis Supervisado de Clasificaci&#243;n<a class="anchor-link" href="#Analisis-Supervisado-de-Clasificaci%C3%B3n">&#182;</a></h1><h2 id="Dataset-de-gustos-de-peliculas">Dataset de gustos de peliculas<a class="anchor-link" href="#Dataset-de-gustos-de-peliculas">&#182;</a></h2>
+<h1 id="An%C3%A1lisis-Supervisado-de-Clasificaci%C3%B3n">An&#225;lisis Supervisado de Clasificaci&#243;n<a class="anchor-link" href="#An%C3%A1lisis-Supervisado-de-Clasificaci%C3%B3n">&#182;</a></h1><h2 id="Dataset-de-gustos-de-peliculas">Dataset de gustos de peliculas<a class="anchor-link" href="#Dataset-de-gustos-de-peliculas">&#182;</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -13984,12 +13984,12 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="An%C3%A1lisis-exploratorio-de-los-datos">An&#225;lisis exploratorio de los datos<a class="anchor-link" href="#An%C3%A1lisis-exploratorio-de-los-datos">&#182;</a></h3>
+<h2 id="An%C3%A1lisis-exploratorio-de-los-datos">An&#225;lisis exploratorio de los datos<a class="anchor-link" href="#An%C3%A1lisis-exploratorio-de-los-datos">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[454]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Libreria que vamos a utilizar para el análisis</span>
@@ -14006,7 +14006,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[622]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Nahuel\Desktop\DataSets a Estudiar\My Personal Movie DataSet\data.xlsx&quot;</span><span class="p">)</span><span class="c1">#Cargamos la tabla</span>
@@ -14021,7 +14021,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[623]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="c1">#Observamos las dimensiones, esta bien saberlas desde un principio, ya que luego procederemos a filtrar los NaN&#39;s</span>
@@ -14040,7 +14040,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[623]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
@@ -14058,7 +14058,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[624]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="c1">#Los datos resultan estar bien cargados</span>
@@ -14077,7 +14077,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[624]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
 
@@ -14204,7 +14204,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[625]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;RNK&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="c1">#Elegimos dropear RNK ya que es una variable sin valor en este caso, </span>
@@ -14219,7 +14219,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[626]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14238,7 +14238,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[626]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
@@ -14359,7 +14359,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[627]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="c1">#Realmente todos deberian de ser tratados como objetos, ya que el año en este dataframe cumple una funcion de variable</span>
@@ -14380,7 +14380,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[627]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -14409,7 +14409,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[628]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="c1">#Limpieza de NaN&#39;s antes de realizar un grafico de correlación, </span>
@@ -14431,7 +14431,7 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[628]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
@@ -14449,7 +14449,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[629]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">CreateDummies</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ColumnDividir</span><span class="p">):</span><span class="c1">#Funcion para creacion de dummies</span>
@@ -14467,7 +14467,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[630]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_a</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;RATE&quot;</span><span class="p">,</span> <span class="s2">&quot;GENRE 1&quot;</span><span class="p">]]</span><span class="c1">#Selecciono solo Rate y GENRE 1, ya que queremos saber si existe preferencias en cuanto a generos </span>
@@ -14483,7 +14483,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[631]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span><span class="c1">#Libreria para creacion de graficos de calor</span>
@@ -14529,7 +14529,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[632]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span><span class="c1">#Convertimos todos a objetos, aunque observaremos mas adelante como RATE lo volvemos a pasar a número.</span>
@@ -14549,7 +14549,7 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[632]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -14578,7 +14578,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[633]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;RATE&quot;</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
@@ -14604,7 +14604,7 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[633]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -14638,7 +14638,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[634]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;YEAR&quot;</span><span class="p">])</span>
@@ -14661,7 +14661,7 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[634]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
 
@@ -14695,7 +14695,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[635]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;GENRE 1&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="c1">#Generos que existen en GENRE 1</span>
@@ -14714,7 +14714,7 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[635]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
 
 
@@ -14734,7 +14734,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[636]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">genre_count</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;GENRE 1&quot;</span><span class="p">])[</span><span class="s2">&quot;GENRE 1&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -14755,7 +14755,7 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[636]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -14787,7 +14787,7 @@ Name: GENRE 1, dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[637]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span><span class="c1">#Todas las columnas del dataframe</span>
@@ -14806,7 +14806,7 @@ Name: GENRE 1, dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[637]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -14834,7 +14834,7 @@ Name: GENRE 1, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Variable-Target-y-Variables-Predictoras">Variable Target y Variables Predictoras<a class="anchor-link" href="#Variable-Target-y-Variables-Predictoras">&#182;</a></h3>
+<h2 id="Variable-Target-y-Variables-Predictoras">Variable Target y Variables Predictoras<a class="anchor-link" href="#Variable-Target-y-Variables-Predictoras">&#182;</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14846,7 +14846,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[638]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">CreateDummies</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;GENRE 1&quot;</span> <span class="p">)</span>
@@ -14868,7 +14868,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[639]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14887,7 +14887,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[639]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
 
 
@@ -15069,7 +15069,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[640]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;TITLE&quot;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="c1">#El titulo no nos será util a la hora de predecir.</span>
@@ -15083,7 +15083,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[641]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="c1">#Tenemos un dataset de 996 columnas, lo cual tiene sentido despues de crear tantas dummies</span>
@@ -15102,7 +15102,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[641]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 
 
 
@@ -15284,7 +15284,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[642]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;RATE&quot;</span><span class="p">]</span><span class="c1">#Nuestra variable a predecir</span>
@@ -15298,7 +15298,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[643]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colnames</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span><span class="c1">#conseguimos una lista de todas las variables</span>
@@ -15312,7 +15312,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[868]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">colnames</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
@@ -15331,7 +15331,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[868]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 
 
 
@@ -15353,7 +15353,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[645]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">predictors</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">colnames</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">target</span><span class="p">]</span><span class="c1">#Conseguimos una lista con todas las variables exceptuando la Y</span>
@@ -15367,7 +15367,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[869]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">predictors</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span><span class="c1">#Nuestras variables predictoras</span>
@@ -15386,7 +15386,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[869]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 
 
 
@@ -15408,7 +15408,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[647]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="c1">#Pasamos a Y como entero</span>
@@ -15422,7 +15422,7 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[648]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">predictors</span><span class="p">]</span>
@@ -15436,14 +15436,14 @@ variables Y(las que nos interesan predecir), daremos uso de la función de dummi
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="RandomForest-/-Bosque-Aleatorio">RandomForest / Bosque Aleatorio<a class="anchor-link" href="#RandomForest-/-Bosque-Aleatorio">&#182;</a></h3><p>Empezaremos dando uso de un bosque aleatorio para clasificar, el mismo es muy util cuando nos enfrentamos a problemas de multiclasificación y además poseemos un gran número de razgos/columnas.
+<h2 id="RandomForest-/-Bosque-Aleatorio">RandomForest / Bosque Aleatorio<a class="anchor-link" href="#RandomForest-/-Bosque-Aleatorio">&#182;</a></h2><p>Empezaremos dando uso de un bosque aleatorio para clasificar, el mismo es muy util cuando nos enfrentamos a problemas de multiclasificación y además poseemos un gran número de razgos/columnas.
 Algo importante a recordar es la pequeña cantidad de muestras del valor 2,3 y 10. Nuestro modelo de todas formas podría resultar no tan bueno debido a estas pequeñas cantidades.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[649]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
@@ -15457,7 +15457,7 @@ Algo importante a recordar es la pequeña cantidad de muestras del valor 2,3 y 1
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[652]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">forest</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">,</span>  <span class="n">oob_score</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">21</span><span class="p">)</span><span class="c1">#Creacion de modelo</span>
@@ -15472,7 +15472,7 @@ Algo importante a recordar es la pequeña cantidad de muestras del valor 2,3 y 1
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[653]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">forest</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span><span class="c1">#Entrenamos el modelo, como es un bosque aleatorio, no es necesario elegir variables, el mismo modelo las pondera</span>
@@ -15507,7 +15507,7 @@ C:\Users\Nahuel\anaconda3\envs\Tranajo\lib\site-packages\sklearn\base.py:446: Us
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[653]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
 
 
 
@@ -15526,7 +15526,7 @@ C:\Users\Nahuel\anaconda3\envs\Tranajo\lib\site-packages\sklearn\base.py:446: Us
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[654]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">forest</span><span class="o">.</span><span class="n">oob_score_</span><span class="c1">#Tenemos un score aprox de 0.29, lo cual indica que es bastante malo, pero por medio de técnicas lo mejoraremos.</span>
@@ -15545,7 +15545,7 @@ C:\Users\Nahuel\anaconda3\envs\Tranajo\lib\site-packages\sklearn\base.py:446: Us
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[654]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
 
 
 
@@ -15563,14 +15563,14 @@ C:\Users\Nahuel\anaconda3\envs\Tranajo\lib\site-packages\sklearn\base.py:446: Us
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="SVC">SVC<a class="anchor-link" href="#SVC">&#182;</a></h3><p>Continuando tenemos SVM, específicamente SVClassifier, al igual que el random forest es muy util en situaciones con multiclasificación, con  una gran cantidad de columnas y especialmente en dataset medianos debido a su gran coste computacional.
+<h2 id="SVC">SVC<a class="anchor-link" href="#SVC">&#182;</a></h2><p>Continuando tenemos SVM, específicamente SVClassifier, al igual que el random forest es muy util en situaciones con multiclasificación, con  una gran cantidad de columnas y especialmente en dataset medianos debido a su gran coste computacional.
 En esta seccion daremos uso de un poco mas de machine learning para decidir cual C es el óptimo, y que estilo de kernel.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[497]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span><span class="c1">#Importamos el modelo</span>
@@ -15584,7 +15584,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[658]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">GridSearchCV</span><span class="c1">#train and test, y GridSearchCV para mezclar aun un poco mas,</span>
@@ -15599,7 +15599,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[659]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="c1">#Para evaluar el modelo</span>
@@ -15613,7 +15613,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[660]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.utils</span> <span class="kn">import</span> <span class="n">shuffle</span><span class="c1">#Para randomizar un poco la muestra y no quede tan ordenada</span>
@@ -15627,7 +15627,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[661]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_sh</span><span class="p">,</span> <span class="n">Y_sh</span> <span class="o">=</span> <span class="n">shuffle</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span><span class="c1">#Mezclamos</span>
@@ -15641,7 +15641,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[662]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train1</span><span class="p">,</span> <span class="n">X_test1</span><span class="p">,</span> <span class="n">Y_train1</span><span class="p">,</span> <span class="n">Y_test1</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_sh</span><span class="p">,</span><span class="n">Y_sh</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span> <span class="mf">0.20</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span><span class="c1">#Esta es una forma de hacer</span>
@@ -15657,7 +15657,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[663]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_test1</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_train1</span><span class="o">.</span><span class="n">shape</span><span class="c1">#Las dimensiones de los conjuntos de entrenamiento y testeo</span>
@@ -15676,7 +15676,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[663]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
 
 
 
@@ -15694,7 +15694,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[664]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters</span> <span class="o">=</span> <span class="p">[{</span>
@@ -15718,7 +15718,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[666]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">SVC</span><span class="p">(</span><span class="n">decision_function_shape</span><span class="o">=</span><span class="s2">&quot;ovr&quot;</span><span class="p">),</span><span class="n">param_grid</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train1</span><span class="p">,</span> <span class="n">Y_train1</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
@@ -15755,7 +15755,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[668]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">best_params_</span><span class="c1">#Tenemos que el mejor modelo seria un rbf, con C=1, y gamma = 0.2</span>
@@ -15774,7 +15774,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[668]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
 
 
 
@@ -15792,7 +15792,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[670]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">classifier</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">best_estimator_</span><span class="c1">#Creamos el modelo con los mejores parametros</span>
@@ -15806,7 +15806,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[672]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">yfit1</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test1</span><span class="p">)</span><span class="c1">#Le damos el conjunto de test para evaluar</span>
@@ -15820,7 +15820,7 @@ En esta seccion daremos uso de un poco mas de machine learning para decidir cual
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[674]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">Y_test1</span><span class="p">,</span> <span class="n">yfit1</span><span class="p">))</span><span class="c1">#Aca tenemos la evaluacion, podemos notar varias cosas, entre ellas que la precision</span>
@@ -15886,7 +15886,7 @@ C:\Users\Nahuel\anaconda3\envs\Tranajo\lib\site-packages\sklearn\metrics\_classi
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Reclasificando-Y">Reclasificando Y<a class="anchor-link" href="#Reclasificando-Y">&#182;</a></h3><p>Una forma de solucionarlo seria hacer una reclasificacion de Y, tal vez lo más óptimo no es intentar clasificar el número exacto valoracion de una película, sino si posiblemente le va a gustar o no.
+<h2 id="Reclasificando-Y">Reclasificando Y<a class="anchor-link" href="#Reclasificando-Y">&#182;</a></h2><p>Una forma de solucionarlo seria hacer una reclasificacion de Y, tal vez lo más óptimo no es intentar clasificar el número exacto valoracion de una película, sino si posiblemente le va a gustar o no.
 Para esto lo que hacemos es separar Y en dos tramos:</p>
 <ul>
 <li>le gusta, una nota de entre 6 y 10</li>
@@ -15899,7 +15899,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[870]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">evenType</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">Y</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
@@ -15919,7 +15919,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[870]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
 
 
 
@@ -15937,7 +15937,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[568]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Creamos una función, que hará que los valores del 1 al 6, tomen el valor de &quot;mala&quot; y los mayores de 6 hasta 10, sean &quot;muy buena&quot;</span>
@@ -15960,7 +15960,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[569]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">state</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="n">event</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">evenType</span><span class="p">))</span><span class="c1">#Aplicamos la funcion a cada valor dentro de evenType</span>
@@ -15974,7 +15974,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[871]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">state</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span><span class="c1">#Observamos el resultado</span>
@@ -15993,7 +15993,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[871]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
 
 
 
@@ -16011,7 +16011,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[571]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">forest2</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">,</span> <span class="n">oob_score</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span><span class="c1">#Creamos nuevamente el modelo</span>
@@ -16025,7 +16025,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[675]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">forest2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span><span class="c1">#Y lo entrenamos con la X de siempre pero aplicandole esta vez la nueva Y</span>
@@ -16057,7 +16057,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[675]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
 
 
 
@@ -16076,7 +16076,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[676]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">forest2</span><span class="o">.</span><span class="n">oob_score_</span><span class="c1">#Observamos que la efectividad del modelo, subió increiblemente</span>
@@ -16095,7 +16095,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[676]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
 
 
 
@@ -16113,7 +16113,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[678]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">state</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span> <span class="mf">0.20</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span><span class="c1">#creamos train and test para SVC</span>
@@ -16127,7 +16127,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[679]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf2</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">SVC</span><span class="p">(</span><span class="n">decision_function_shape</span><span class="o">=</span><span class="s2">&quot;ovr&quot;</span><span class="p">),</span><span class="n">param_grid</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
@@ -16141,7 +16141,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[681]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf2</span><span class="o">.</span><span class="n">best_params_</span><span class="c1">#Vemos que los parametros de C y gamma cambiaron</span>
@@ -16160,7 +16160,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[681]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
 
 
 
@@ -16178,7 +16178,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[682]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">classifier2</span> <span class="o">=</span><span class="n">clf2</span><span class="o">.</span><span class="n">best_estimator_</span>
@@ -16192,7 +16192,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[683]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">yfit2</span> <span class="o">=</span> <span class="n">classifier2</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -16206,7 +16206,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[684]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">yfit2</span><span class="p">))</span><span class="c1">#SVC también se incremento y hasta siendo mejor que RandomForest, lo cual tiene sentido</span>
@@ -16250,12 +16250,12 @@ weighted avg       0.74      0.73      0.73        41
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Implementaci%C3%B3n-de-Regresi%C3%B3n-Log%C3%ADstica">Implementaci&#243;n de Regresi&#243;n Log&#237;stica<a class="anchor-link" href="#Implementaci%C3%B3n-de-Regresi%C3%B3n-Log%C3%ADstica">&#182;</a></h3>
+<h2 id="Implementaci%C3%B3n-de-Regresi%C3%B3n-Log%C3%ADstica">Implementaci&#243;n de Regresi&#243;n Log&#237;stica<a class="anchor-link" href="#Implementaci%C3%B3n-de-Regresi%C3%B3n-Log%C3%ADstica">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[539]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Como mencionamos antes ahora usaremos regresión logistica, y tambien RFE para seleccionar las variables más optimas.</span>
@@ -16273,7 +16273,7 @@ weighted avg       0.74      0.73      0.73        41
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[706]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
@@ -16287,7 +16287,7 @@ weighted avg       0.74      0.73      0.73        41
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[686]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rfe</span> <span class="o">=</span> <span class="n">RFE</span><span class="p">(</span><span class="n">lr</span><span class="p">,</span> <span class="n">n_features_to_select</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="c1">#Creacion de modelo y elección de variables</span>
@@ -16302,7 +16302,7 @@ weighted avg       0.74      0.73      0.73        41
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[872]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rfe</span><span class="o">.</span><span class="n">ranking_</span><span class="p">[:</span><span class="mi">7</span><span class="p">]</span><span class="c1">#El ranking de todas las variables, las que salen con 1 son las que utilizaremos</span>
@@ -16322,7 +16322,7 @@ weighted avg       0.74      0.73      0.73        41
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[872]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
 
 
 
@@ -16340,7 +16340,7 @@ weighted avg       0.74      0.73      0.73        41
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[873]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">rfe</span><span class="o">.</span><span class="n">ranking_</span><span class="p">))[:</span><span class="mi">7</span><span class="p">]</span><span class="c1">#Para observarlo de mejor manera</span>
@@ -16359,7 +16359,7 @@ weighted avg       0.74      0.73      0.73        41
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[873]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[63]:</div>
 
 
 
@@ -16383,7 +16383,7 @@ weighted avg       0.74      0.73      0.73        41
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[688]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_features</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">rfe</span><span class="o">.</span><span class="n">support_</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span><span class="c1">#Selecionamos las variables que posean el 1</span>
@@ -16404,7 +16404,7 @@ weighted avg       0.74      0.73      0.73        41
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[688]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[64]:</div>
 
 
 
@@ -16519,7 +16519,7 @@ weighted avg       0.74      0.73      0.73        41
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[689]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">score</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">lr</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="s2">&quot;accuracy&quot;</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span><span class="c1">#Creamos nuevamente el modelo pero esta vez usando las </span>
@@ -16531,10 +16531,10 @@ weighted avg       0.74      0.73      0.73        41
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">score</span>
@@ -16545,10 +16545,34 @@ weighted avg       0.74      0.73      0.73        41
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[66]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([0.57142857, 0.76190476, 0.85714286, 0.65      , 0.65      ,
+       0.8       , 0.7       , 0.65      , 0.7       , 0.7       ])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[691]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="c1">#notamos que su efectividad pareciera ser mayor que la de RandomForest pero menor que la de SVC.</span>
@@ -16567,7 +16591,7 @@ weighted avg       0.74      0.73      0.73        41
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[691]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
 
 
 
@@ -16585,7 +16609,7 @@ weighted avg       0.74      0.73      0.73        41
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[692]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">score2</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">lr</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="s2">&quot;accuracy&quot;</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="n">LeaveOneOut</span><span class="p">())</span><span class="c1">#Utilizamos cada fila para testear y entrenar</span>
@@ -16599,7 +16623,7 @@ weighted avg       0.74      0.73      0.73        41
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[693]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">score2</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="c1">#Y corroboramos que efectivamente regresión logistica es lo más óptimo cuando se trata de un problema de </span>
@@ -16619,7 +16643,7 @@ weighted avg       0.74      0.73      0.73        41
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[693]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[69]:</div>
 
 
 
@@ -16637,14 +16661,171 @@ weighted avg       0.74      0.73      0.73        41
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="KNN-Clasificaci%C3%B3n">KNN Clasificaci&#243;n<a class="anchor-link" href="#KNN-Clasificaci%C3%B3n">&#182;</a></h3><p>Para cerrar usaremos un último tipo de clasificación, conocido como KNN. El mismo se basa en separar clases por medio de distancias.
+<h3 id="Mejorando-Regresi%C3%B3n-Log%C3%ADstica">Mejorando Regresi&#243;n Log&#237;stica<a class="anchor-link" href="#Mejorando-Regresi%C3%B3n-Log%C3%ADstica">&#182;</a></h3><p>Una manera óptima de mejorar el modelo sería haciendo un bucle que nos devuelva los valores de r2 según la cantidad de variables que se apliquen.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">r2s</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">16</span><span class="p">):</span>
+    <span class="n">lri</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+    <span class="n">rfei</span> <span class="o">=</span> <span class="n">RFE</span><span class="p">(</span><span class="n">lri</span><span class="p">,</span> <span class="n">n_features_to_select</span><span class="o">=</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">rfei</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">Y_train</span><span class="p">)</span>
+    <span class="n">df_featuresi</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">rfei</span><span class="o">.</span><span class="n">support_</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+    <span class="n">Xi</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">df_featuresi</span><span class="p">]</span>
+    <span class="n">score_i</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">lri</span><span class="p">,</span> <span class="n">Xi</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="s2">&quot;accuracy&quot;</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">score_im</span> <span class="o">=</span> <span class="n">score_i</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">r2s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score_im</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Con </span><span class="si">{0}</span><span class="s2"> variables, el r2 es </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">score_im</span><span class="p">))</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span> <span class="n">r2s</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Numero de Variables&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;R2 - score&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Variación de R2 según cantidad de variables&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El r2 maximo es </span><span class="si">{0}</span><span class="s2">, con una cantidad de </span><span class="si">{1}</span><span class="s2"> +2 variables&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">r2s</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">r2s</span> <span class="o">==</span> <span class="nb">max</span><span class="p">(</span><span class="n">r2s</span><span class="p">))</span> <span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Con 2 variables, el r2 es 0.6757142857142857
+Con 3 variables, el r2 es 0.6757142857142857
+Con 4 variables, el r2 es 0.6257142857142858
+Con 5 variables, el r2 es 0.6304761904761905
+Con 6 variables, el r2 es 0.6552380952380953
+Con 7 variables, el r2 es 0.6552380952380953
+Con 8 variables, el r2 es 0.6602380952380953
+Con 9 variables, el r2 es 0.6847619047619049
+Con 10 variables, el r2 es 0.7040476190476191
+Con 11 variables, el r2 es 0.6902380952380953
+Con 12 variables, el r2 es 0.6952380952380952
+Con 13 variables, el r2 es 0.7050000000000001
+Con 14 variables, el r2 es 0.72
+Con 15 variables, el r2 es 0.7685714285714286
+El r2 maximo es 0.7685714285714286, con una cantidad de (array([13], dtype=int64),) +2 variables
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Podemos observar que sacariamos el maximo valor de r2 con un total de 15 variables (en el rango establecido en el bucle).</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Si quisieramos saber cuales son esas variables, bastaria con ejecutar el mismo codigo que antes pero aplicando 15 en lugar de 10.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rfef</span> <span class="o">=</span> <span class="n">RFE</span><span class="p">(</span><span class="n">lr</span><span class="p">,</span> <span class="n">n_features_to_select</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">rfef</span> <span class="o">=</span> <span class="n">rfef</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+<span class="n">df_features</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">rfef</span><span class="o">.</span><span class="n">support_</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">Xf</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">df_features</span><span class="p">]</span>
+<span class="n">Xf</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="c1">#Las variables seleccionadas.</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;GENRE 1_Adventure&#39;,
+ &#39;GENRE 1_Biography&#39;,
+ &#39;GENRE 1_Comedy&#39;,
+ &#39;GENRE 1_Drama&#39;,
+ &#39;GENRE 1_Mystery&#39;,
+ &#39;YEAR_2008&#39;,
+ &#39;DIRECTOR_Christopher Nolan&#39;,
+ &#39;DIRECTOR_Martin Scorsese&#39;,
+ &#39;ACT 1_Chris Pratt&#39;,
+ &#39;ACT 1_Christian Bale&#39;,
+ &#39;ACT 1_Jake Gyllenhaal&#39;,
+ &#39;ACT 1_Ryan Reynolds&#39;,
+ &#39;ACT 2_Cillian Murphy&#39;,
+ &#39;ACT 5_Idris Elba&#39;,
+ &#39;ACT 5_Mark Ruffalo&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="KNN-Clasificaci%C3%B3n">KNN Clasificaci&#243;n<a class="anchor-link" href="#KNN-Clasificaci%C3%B3n">&#182;</a></h2><p>Para cerrar usaremos un último tipo de clasificación, conocido como KNN. El mismo se basa en separar clases por medio de distancias.
 Lo malo de este modelo es que si se le proporciona variables no tan útiles o que no aportan nada, su eficiencia cae fuertemente.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[861]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
@@ -16658,7 +16839,7 @@ Lo malo de este modelo es que si se le proporciona variables no tan útiles o qu
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[862]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Usaremos la versión de entrenamiento de X y state para agilizar el análisis</span>
@@ -16673,7 +16854,7 @@ Lo malo de este modelo es que si se le proporciona variables no tan útiles o qu
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[863]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
@@ -16687,7 +16868,7 @@ Lo malo de este modelo es que si se le proporciona variables no tan útiles o qu
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[864]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy</span> <span class="o">=</span> <span class="n">Knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">)</span>
@@ -16701,7 +16882,7 @@ Lo malo de este modelo es que si se le proporciona variables no tan útiles o qu
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[866]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy</span><span class="c1">#Vemos que es casi tan bueno como la regresión logísitica y SVC</span>
@@ -16720,7 +16901,7 @@ Lo malo de este modelo es que si se le proporciona variables no tan útiles o qu
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[866]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[77]:</div>
 
 
 
@@ -16733,6 +16914,26 @@ Lo malo de este modelo es que si se le proporciona variables no tan útiles o qu
 
 </div>
 
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>By: Nahuel Cedrés Torres <a href="https://www.linkedin.com/in/nahuel-cedr%C3%A9s/">https://www.linkedin.com/in/nahuel-cedr%C3%A9s/</a></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
 </div>
 
 </div>
