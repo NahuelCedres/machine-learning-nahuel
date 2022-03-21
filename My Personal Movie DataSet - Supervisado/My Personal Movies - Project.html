@@ -14009,7 +14009,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Nahuel\Desktop\DataSets a Estudiar\My Personal Movie DataSet\data.xlsx&quot;</span><span class="p">)</span><span class="c1">#Cargamos la tabla</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Nahuel\Desktop\DataSets a Estudiar\My Personal Movie DataSet\data.xlsx&quot;</span><span class="p">)</span><span class="c1">#Cargamos la tabla</span>
 <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span><span class="c1">#Semilla</span>
 </pre></div>
 
@@ -14024,7 +14024,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="c1">#Observamos las dimensiones, esta bien saberlas desde un principio, ya que luego procederemos a filtrar los NaN&#39;s</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">start</span><span class="o">.</span><span class="n">shape</span><span class="c1">#Observamos las dimensiones, esta bien saberlas desde un principio, ya que luego procederemos a filtrar los NaN&#39;s</span>
 </pre></div>
 
      </div>
@@ -14061,7 +14061,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="c1">#Los datos resultan estar bien cargados</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">start</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="c1">#Los datos resultan estar bien cargados</span>
 </pre></div>
 
      </div>
@@ -14207,7 +14207,7 @@ Daremos uso de bosques aleatorios, SVM, regresión logística y KNN.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;RNK&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="c1">#Elegimos dropear RNK ya que es una variable sin valor en este caso, </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">start</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;RNK&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="c1">#Elegimos dropear RNK ya que es una variable sin valor en este caso, </span>
 <span class="c1">#RNK estaria cumpliendo el mismo proposito del indice, ya que estan ordenados</span>
 </pre></div>
 
@@ -15889,8 +15889,8 @@ C:\Users\Nahuel\anaconda3\envs\Tranajo\lib\site-packages\sklearn\metrics\_classi
 <h2 id="Reclasificando-Y">Reclasificando Y<a class="anchor-link" href="#Reclasificando-Y">&#182;</a></h2><p>Una forma de solucionarlo seria hacer una reclasificacion de Y, tal vez lo más óptimo no es intentar clasificar el número exacto valoracion de una película, sino si posiblemente le va a gustar o no.
 Para esto lo que hacemos es separar Y en dos tramos:</p>
 <ul>
-<li>le gusta, una nota de entre 6 y 10</li>
-<li>No le gusta, una nota menor que 6</li>
+<li>le gusta, una nota de entre 7 (incluido) y 10</li>
+<li>No le gusta, una nota menor que 7</li>
 </ul>
 <p>Con esto en principio solucionariamos el problema de cantidad de muestras de las variables a predecir.
 Tambien pasariamos de un problema de multiclasificación a un problema de unicamente 2 clasificaciones (con esto podríamos implementar también regresión logística).</p>
@@ -15940,13 +15940,13 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Creamos una función, que hará que los valores del 1 al 6, tomen el valor de &quot;mala&quot; y los mayores de 6 hasta 10, sean &quot;muy buena&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Creamos una función, que hará que los valores del 1 al 6, tomen el valor de &quot;0&quot; y los mayores de 6 hasta 10, sean &quot;1&quot;</span>
 <span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="k">def</span> <span class="nf">event</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;mala&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;muy buena&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
     <span class="k">return</span> <span class="n">x</span>
@@ -15977,7 +15977,8 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">state</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span><span class="c1">#Observamos el resultado</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">state</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span><span class="c1">#Observamos el resultado, si es 1, seguramente esa pelicula le vaya a gustar ya que tendra un puntaje de 7 o más</span>
+<span class="c1">#si es 0 posiblemente no le vaya a gustar, ya que tendrá un puntaje inferior a 7.</span>
 </pre></div>
 
      </div>
@@ -15999,7 +16000,7 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;muy buena&#39;, &#39;muy buena&#39;, &#39;muy buena&#39;, &#39;muy buena&#39;, &#39;muy buena&#39;]</pre>
+<pre>[1, 1, 1, 1, 1]</pre>
 </div>
 
 </div>
@@ -16232,8 +16233,8 @@ Tambien pasariamos de un problema de multiclasificación a un problema de unicam
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>              precision    recall  f1-score   support
 
-        mala       0.78      0.67      0.72        21
-   muy buena       0.70      0.80      0.74        20
+           0       0.78      0.67      0.72        21
+           1       0.70      0.80      0.74        20
 
     accuracy                           0.73        41
    macro avg       0.74      0.73      0.73        41
@@ -16537,7 +16538,7 @@ weighted avg       0.74      0.73      0.73        41
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">score</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="c1">#Observamos el r2</span>
 </pre></div>
 
      </div>
@@ -16559,44 +16560,6 @@ weighted avg       0.74      0.73      0.73        41
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([0.57142857, 0.76190476, 0.85714286, 0.65      , 0.65      ,
-       0.8       , 0.7       , 0.65      , 0.7       , 0.7       ])</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="c1">#notamos que su efectividad pareciera ser mayor que la de RandomForest pero menor que la de SVC.</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>0.7040476190476191</pre>
 </div>
 
@@ -16609,7 +16572,7 @@ weighted avg       0.74      0.73      0.73        41
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">score2</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">lr</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="s2">&quot;accuracy&quot;</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="n">LeaveOneOut</span><span class="p">())</span><span class="c1">#Utilizamos cada fila para testear y entrenar</span>
@@ -16623,7 +16586,7 @@ weighted avg       0.74      0.73      0.73        41
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">score2</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="c1">#Y corroboramos que efectivamente regresión logistica es lo más óptimo cuando se trata de un problema de </span>
@@ -16643,7 +16606,7 @@ weighted avg       0.74      0.73      0.73        41
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[69]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
 
 
 
@@ -16667,7 +16630,7 @@ weighted avg       0.74      0.73      0.73        41
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -16763,10 +16726,11 @@ El r2 maximo es 0.7685714285714286, con una cantidad de (array([13], dtype=int64
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rfef</span> <span class="o">=</span> <span class="n">RFE</span><span class="p">(</span><span class="n">lr</span><span class="p">,</span> <span class="n">n_features_to_select</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#para ver las 15 variables:</span>
+<span class="n">rfef</span> <span class="o">=</span> <span class="n">RFE</span><span class="p">(</span><span class="n">lr</span><span class="p">,</span> <span class="n">n_features_to_select</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">rfef</span> <span class="o">=</span> <span class="n">rfef</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
 <span class="n">df_features</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">rfef</span><span class="o">.</span><span class="n">support_</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
 <span class="n">Xf</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">df_features</span><span class="p">]</span>
@@ -16786,7 +16750,7 @@ El r2 maximo es 0.7685714285714286, con una cantidad de (array([13], dtype=int64
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
 
 
 
@@ -16815,63 +16779,31 @@ El r2 maximo es 0.7685714285714286, con una cantidad de (array([13], dtype=int64
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="KNN-Clasificaci%C3%B3n">KNN Clasificaci&#243;n<a class="anchor-link" href="#KNN-Clasificaci%C3%B3n">&#182;</a></h2><p>Para cerrar usaremos un último tipo de clasificación, conocido como KNN. El mismo se basa en separar clases por medio de distancias.
-Lo malo de este modelo es que si se le proporciona variables no tan útiles o que no aportan nada, su eficiencia cae fuertemente.</p>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Guardaremos los valores de los parametros para ir comparando </span>
+<span class="c1">#con las demás regresiones.</span>
+<span class="n">df_coeff15</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+           <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="n">Xf</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">})</span>
+</pre></div>
 
+     </div>
 </div>
+</div>
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Usaremos la versión de entrenamiento de X y state para agilizar el análisis</span>
-<span class="c1"># X_test,X_train,Y_train, Y_test</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy</span> <span class="o">=</span> <span class="n">Knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train15</span><span class="p">,</span> <span class="n">X_test15</span><span class="p">,</span> <span class="n">Y_train15</span><span class="p">,</span> <span class="n">Y_test15</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">Xf</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">21</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">lr15</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train15</span><span class="p">,</span> <span class="n">Y_train15</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16882,10 +16814,257 @@ Lo malo de este modelo es que si se le proporciona variables no tan útiles o qu
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Dataframe que contiene solo las variables que se utilizan en regresión logistica con RFE</span>
+<span class="n">df_coeff15</span><span class="p">[</span><span class="s2">&quot;RFE15&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lr15</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_coeff15</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[73]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>variable</th>
+      <th>RFE15</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>GENRE 1_Adventure</td>
+      <td>-0.866245</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>GENRE 1_Biography</td>
+      <td>1.600378</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GENRE 1_Comedy</td>
+      <td>-1.300968</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GENRE 1_Drama</td>
+      <td>1.224743</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>GENRE 1_Mystery</td>
+      <td>0.829417</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>YEAR_2008</td>
+      <td>-1.184656</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>DIRECTOR_Christopher Nolan</td>
+      <td>1.015649</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>DIRECTOR_Martin Scorsese</td>
+      <td>0.885555</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>ACT 1_Chris Pratt</td>
+      <td>0.893231</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>ACT 1_Christian Bale</td>
+      <td>0.963072</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>ACT 1_Jake Gyllenhaal</td>
+      <td>0.964189</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>ACT 1_Ryan Reynolds</td>
+      <td>-1.074242</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>ACT 2_Cillian Murphy</td>
+      <td>-0.866245</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>ACT 5_Idris Elba</td>
+      <td>-0.866245</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>ACT 5_Mark Ruffalo</td>
+      <td>1.057931</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Lasso-y-Ridge">Lasso y Ridge<a class="anchor-link" href="#Lasso-y-Ridge">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">RidgeClassifierCV</span><span class="c1">#para computar Ridge usaremos este comando que es más cómodo</span>
+<span class="c1">#Y para Lasso usaremos un parametro de LogisticRegression.</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Computamos Ridge</span>
+<span class="n">rdg</span> <span class="o">=</span> <span class="n">RidgeClassifierCV</span><span class="p">(</span><span class="n">alphas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> 
+                        <span class="n">fit_intercept</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="c1">#Notar que este comando ya incluye cross validation.</span>
+<span class="n">rdg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">state</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[75]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>RidgeClassifierCV(alphas=array([1.00000000e-10, 1.14895100e-10, 1.32008840e-10, 1.51671689e-10,
+       1.74263339e-10, 2.00220037e-10, 2.30043012e-10, 2.64308149e-10,
+       3.03677112e-10, 3.48910121e-10, 4.00880633e-10, 4.60592204e-10,
+       5.29197874e-10, 6.08022426e-10, 6.98587975e-10, 8.02643352e-10,
+       9.22197882e-10, 1.05956018e-09, 1.21738273e-09, 1.39871310e-09,
+       1.60705282e-09, 1.8...
+       4.10265811e+00, 4.71375313e+00, 5.41587138e+00, 6.22257084e+00,
+       7.14942899e+00, 8.21434358e+00, 9.43787828e+00, 1.08436597e+01,
+       1.24588336e+01, 1.43145894e+01, 1.64467618e+01, 1.88965234e+01,
+       2.17111795e+01, 2.49450814e+01, 2.86606762e+01, 3.29297126e+01,
+       3.78346262e+01, 4.34701316e+01, 4.99450512e+01, 5.73844165e+01,
+       6.59318827e+01, 7.57525026e+01, 8.70359136e+01, 1.00000000e+02]),
+                  cv=10)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rdg</span><span class="o">.</span><span class="n">alpha_</span><span class="c1">#El mejor alpha en Ridge para nuestro modelo</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[76]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.1683180353330955</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy</span><span class="c1">#Vemos que es casi tan bueno como la regresión logísitica y SVC</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rdg</span><span class="o">.</span><span class="n">best_score_</span><span class="c1">#El modelo calculado con el mejor alpha</span>
 </pre></div>
 
      </div>
@@ -16907,7 +17086,807 @@ Lo malo de este modelo es que si se le proporciona variables no tan útiles o qu
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.7338095238095238</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Armamos el dataframe para guardar estos parametros</span>
+<span class="n">df_params</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+         <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span>
+<span class="p">})</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Podemos apreciar los valores calculados por Ridge</span>
+<span class="n">df_params</span><span class="p">[</span><span class="s2">&quot;rdg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rdg</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_params</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[79]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>variable</th>
+      <th>rdg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>GENRE 1_Action</td>
+      <td>-0.136665</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>GENRE 1_Adventure</td>
+      <td>-0.331072</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GENRE 1_Animation</td>
+      <td>-0.276610</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GENRE 1_Biography</td>
+      <td>0.543375</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>GENRE 1_Comedy</td>
+      <td>-0.592592</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>990</th>
+      <td>ACT 5_Zuleyka Silver</td>
+      <td>-0.064698</td>
+    </tr>
+    <tr>
+      <th>991</th>
+      <td>ACT 5_Çağlar Çorumlu</td>
+      <td>-0.074998</td>
+    </tr>
+    <tr>
+      <th>992</th>
+      <td>ACT 5_Özge Borak</td>
+      <td>-0.020665</td>
+    </tr>
+    <tr>
+      <th>993</th>
+      <td>ACT 5_İbrahim Büyükak</td>
+      <td>-0.080798</td>
+    </tr>
+    <tr>
+      <th>994</th>
+      <td>ACT 5_Şinasi Yurtsever</td>
+      <td>-0.019238</td>
+    </tr>
+  </tbody>
+</table>
+<p>995 rows × 2 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Computamos Lasso con un bucle para sacar el mejor alpha según r2.</span>
+
+<span class="n">alpha</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">scores_</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">alpha</span><span class="p">:</span>
+    <span class="n">lss</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">penalty</span><span class="o">=</span><span class="s2">&quot;l1&quot;</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;liblinear&#39;</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="n">a</span><span class="p">)</span>
+    <span class="n">lss</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+    <span class="n">sco</span> <span class="o">=</span> <span class="n">lss</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">Y_test</span><span class="p">)</span>
+    <span class="n">scores_</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">sco</span><span class="p">,</span><span class="n">a</span><span class="p">])</span><span class="c1">#Rellenamos el array con el valor de r2 conjuntamente con su alpha</span>
+    <span class="n">dfscore</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scores_</span><span class="p">)</span><span class="c1">#lo pasamos a dataframe para que sea mas facil trabajar</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfscore</span><span class="p">[</span><span class="n">dfscore</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span> <span class="nb">max</span><span class="p">(</span><span class="n">dfscore</span><span class="p">[</span><span class="mi">0</span><span class="p">])])</span><span class="c1">#La primera fila serían nuestros valores, el r2 seguido por su alpha.</span>
+
+<span class="n">vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dfscore</span><span class="p">[</span><span class="n">dfscore</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span> <span class="nb">max</span><span class="p">(</span><span class="n">dfscore</span><span class="p">[</span><span class="mi">0</span><span class="p">])])</span><span class="c1">#pasamos a array la primera fila, es la que tiene mayor r2 con menor alpha</span>
+<span class="n">alp</span> <span class="o">=</span> <span class="n">vals</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="c1">#Obtenemos unicamente el alpha</span>
+<span class="c1">#Además concluimos que Lasso es difinitivamente el mejor modelo para esta estimación.</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>C:\Users\Nahuel\anaconda3\envs\Tranajo\lib\site-packages\sklearn\svm\_base.py:1208: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  ConvergenceWarning,
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>            0          1
+184  0.829268  12.458834
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lssf</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">penalty</span><span class="o">=</span><span class="s2">&quot;l1&quot;</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s2">&quot;liblinear&quot;</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="n">alp</span><span class="p">)</span><span class="c1">#Computamos ahora si Lasso</span>
+<span class="n">lssf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">Y_train</span><span class="p">)</span>
+<span class="n">df_params</span><span class="p">[</span><span class="s2">&quot;Lasso&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lssf</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_params</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="c1">#Podemos obsevar los coeficientes de Lasso</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[81]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>variable</th>
+      <th>rdg</th>
+      <th>Lasso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>GENRE 1_Action</td>
+      <td>-0.136665</td>
+      <td>-1.743806</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>GENRE 1_Adventure</td>
+      <td>-0.331072</td>
+      <td>-0.952670</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GENRE 1_Animation</td>
+      <td>-0.276610</td>
+      <td>-3.174617</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GENRE 1_Biography</td>
+      <td>0.543375</td>
+      <td>6.105661</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>GENRE 1_Comedy</td>
+      <td>-0.592592</td>
+      <td>-3.343937</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>990</th>
+      <td>ACT 5_Zuleyka Silver</td>
+      <td>-0.064698</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>991</th>
+      <td>ACT 5_Çağlar Çorumlu</td>
+      <td>-0.074998</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>992</th>
+      <td>ACT 5_Özge Borak</td>
+      <td>-0.020665</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>993</th>
+      <td>ACT 5_İbrahim Büyükak</td>
+      <td>-0.080798</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>994</th>
+      <td>ACT 5_Şinasi Yurtsever</td>
+      <td>-0.019238</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>995 rows × 3 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[82]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#creamos un dataframe para ver todos los coeficientes.</span>
+<span class="n">df_params</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="n">df_params</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">df_coeff15</span><span class="p">,</span> <span class="n">left_on</span> <span class="o">=</span> <span class="s2">&quot;variable&quot;</span><span class="p">,</span> <span class="n">right_on</span> <span class="o">=</span> <span class="s2">&quot;variable&quot;</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">df_params</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[82]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>variable</th>
+      <th>rdg</th>
+      <th>Lasso</th>
+      <th>RFE15</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>GENRE 1_Action</td>
+      <td>-0.136665</td>
+      <td>-1.743806</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>GENRE 1_Adventure</td>
+      <td>-0.331072</td>
+      <td>-0.952670</td>
+      <td>-0.866245</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GENRE 1_Animation</td>
+      <td>-0.276610</td>
+      <td>-3.174617</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GENRE 1_Biography</td>
+      <td>0.543375</td>
+      <td>6.105661</td>
+      <td>1.600378</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>GENRE 1_Comedy</td>
+      <td>-0.592592</td>
+      <td>-3.343937</td>
+      <td>-1.300968</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>990</th>
+      <td>ACT 5_Zuleyka Silver</td>
+      <td>-0.064698</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>991</th>
+      <td>ACT 5_Çağlar Çorumlu</td>
+      <td>-0.074998</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>992</th>
+      <td>ACT 5_Özge Borak</td>
+      <td>-0.020665</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>993</th>
+      <td>ACT 5_İbrahim Büyükak</td>
+      <td>-0.080798</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>994</th>
+      <td>ACT 5_Şinasi Yurtsever</td>
+      <td>-0.019238</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>995 rows × 4 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Podemos observar que las variables que Lasso no convirtió en 0 coinciden con las 15 variables elegidas con RFE.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="K-Nearest-Neighbors">K Nearest Neighbors<a class="anchor-link" href="#K-Nearest-Neighbors">&#182;</a></h2><p>Como último modelo usamremos KNN.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[83]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[84]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Usaremos la versión de entrenamiento de X y state para agilizar el análisis</span>
+<span class="c1"># X_test,X_train,Y_train, Y_test</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy</span> <span class="o">=</span> <span class="n">Knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[87]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">accuracy</span><span class="c1">#Vemos que es casi tan bueno como la regresión logísitica y SVC</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[87]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
 <pre>0.7317073170731707</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Conclusi%C3%B3n">Conclusi&#243;n<a class="anchor-link" href="#Conclusi%C3%B3n">&#182;</a></h2><p>Para concluir el proyecto diremos que parece ser que reclasificar Y conjuntamente con Lasso es la mejor forma de tratar este modelo, además de que las variables escogidas con RFE coindicen con las elegidas por Lasso.
+Para finalizar computaremos un dataframe completo con las etiquetas según cada modelo.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[88]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Juntamos todo</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Forest&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">forest2</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;SVC&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">clf2</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;RFE15&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lr15</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Xf</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Ridge&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rdg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Lasso&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lssf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;KNN&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">start</span><span class="p">[</span><span class="s2">&quot;TITLE&quot;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;Forest&quot;</span><span class="p">,</span><span class="s2">&quot;SVC&quot;</span><span class="p">,</span><span class="s2">&quot;RFE15&quot;</span><span class="p">,</span><span class="s2">&quot;Ridge&quot;</span><span class="p">,</span><span class="s2">&quot;Lasso&quot;</span><span class="p">,</span><span class="s2">&quot;KNN&quot;</span><span class="p">,</span><span class="s2">&quot;Title&quot;</span><span class="p">]]</span>
+<span class="n">df_final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="n">start</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span> <span class="n">right</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">left_on</span> <span class="o">=</span> <span class="s2">&quot;TITLE&quot;</span><span class="p">,</span> <span class="n">right_on</span> <span class="o">=</span> <span class="s2">&quot;Title&quot;</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">df_final</span> <span class="o">=</span> <span class="n">df_final</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Title&quot;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="c1">#Dropeamos para que no quede dos veces el mismo título</span>
+<span class="n">df_final</span><span class="p">[</span><span class="s2">&quot;True&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">state</span><span class="c1">#El Y verdadero, según lo aclaramos cuando realizamos la función lambda</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_final</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="c1">#podemos ver la clasificación según modelo</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[89]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>RNK</th>
+      <th>TITLE</th>
+      <th>RATE</th>
+      <th>DIRECTOR</th>
+      <th>YEAR</th>
+      <th>GENRE 1</th>
+      <th>GENRE 2</th>
+      <th>ACT 1</th>
+      <th>ACT 2</th>
+      <th>ACT 3</th>
+      <th>ACT 4</th>
+      <th>ACT 5</th>
+      <th>Forest</th>
+      <th>SVC</th>
+      <th>RFE15</th>
+      <th>Ridge</th>
+      <th>Lasso</th>
+      <th>KNN</th>
+      <th>True</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>The Prestige</td>
+      <td>10.0</td>
+      <td>Christopher Nolan</td>
+      <td>2006</td>
+      <td>Mystery</td>
+      <td>Sci-Fi</td>
+      <td>Christian Bale</td>
+      <td>Hugh Jackman</td>
+      <td>Michael Caine</td>
+      <td>Scarlett Johansson</td>
+      <td>Andy Serkis</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Interstellar</td>
+      <td>10.0</td>
+      <td>Christopher Nolan</td>
+      <td>2014</td>
+      <td>Sci-Fi</td>
+      <td>Adventure</td>
+      <td>Matthew McConaughey</td>
+      <td>Anne Hathaway</td>
+      <td>Michael Caine</td>
+      <td>Jessica Chastain</td>
+      <td>Timothée Chalamet</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Inception</td>
+      <td>10.0</td>
+      <td>Christopher Nolan</td>
+      <td>2010</td>
+      <td>Sci-Fi</td>
+      <td>Adventure</td>
+      <td>Leonardo DiCaprio</td>
+      <td>Cillian Murphy</td>
+      <td>Michael Caine</td>
+      <td>Marion Cotillard</td>
+      <td>Joseph Gordon-Levitt</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5</td>
+      <td>Predestination</td>
+      <td>9.0</td>
+      <td>Michal Spierig</td>
+      <td>2014</td>
+      <td>Sci-Fi</td>
+      <td>Drama</td>
+      <td>Ethan Hawke</td>
+      <td>Noah Taylor</td>
+      <td>Sarah Snook</td>
+      <td>Madeleine West</td>
+      <td>Christopher Kirby</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6</td>
+      <td>Rush</td>
+      <td>9.0</td>
+      <td>Ron Howard</td>
+      <td>2013</td>
+      <td>Biography</td>
+      <td>Sport</td>
+      <td>Chris Hemsworth</td>
+      <td>Daniel Brühl</td>
+      <td>Olivia Wilde</td>
+      <td>Alexandra Maria Lara</td>
+      <td>Natalie Dormer</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -16922,20 +17901,6 @@ Lo malo de este modelo es que si se le proporciona variables no tan útiles o qu
 <p>By: Nahuel Cedrés Torres <a href="https://www.linkedin.com/in/nahuel-cedr%C3%A9s/">https://www.linkedin.com/in/nahuel-cedr%C3%A9s/</a></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 </body>
 
